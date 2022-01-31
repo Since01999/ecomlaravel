@@ -8,8 +8,14 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $data = Product::all();
-        return view('product',compact('data'));
+        return view('product', compact('data'));
+    }
+    public function detail($id)
+    {
+        $detail = Product::findOrFail($id);
+        return view('detail',compact('detail'));
     }
 }
