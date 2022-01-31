@@ -18,4 +18,13 @@ class ProductController extends Controller
         $detail = Product::findOrFail($id);
         return view('detail',compact('detail'));
     }
+    public function search(Request $request)
+    {
+         $searched = $request->input('query');
+        $data = Product::
+        where('name','like','%'.$request->input('query').'%')
+        ->get();
+
+        return view('search',compact('data', 'searched'));
+    }
 }

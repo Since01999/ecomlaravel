@@ -19,11 +19,11 @@
         <li><a href="#">Link</a></li>
        
       </ul>
-      <form class="navbar-form navbar-left">
+      <form action="{{Route('product.search')}}" class="navbar-form navbar-left">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" name="query" class="form-control search-box" placeholder="Search">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">Search</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Cart()</a></li>
