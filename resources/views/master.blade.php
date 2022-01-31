@@ -29,6 +29,12 @@
 .login{
     padding: 20px;
 }
+img.slider-img{
+    height: 400px !important;
+}
+.slider-text{
+    background-color: #97c9aa;
+}   
 
 </style>
 
