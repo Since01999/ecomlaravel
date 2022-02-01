@@ -35,3 +35,6 @@ Route::get('logout', function () {
 
 Route::get('/cartlists',[ProductController::class,'cartList'])->name('product.cartlist');
 Route::get('removecarts/{id}',[ProductController::class,'removeCart'])->name('Product.removeCart');
+Route::get('/orders',[ProductController::class,'confirmOrders'])->name('product.order');
+Route::post('/confirms',[ProductController::class,'orderConfirmation'])->name('product.confirm');
+Route::get('/myorders',[ProductController::class,'orderList'])->name('product.myorder');
