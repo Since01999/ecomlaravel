@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
@@ -18,7 +19,8 @@ class UserController extends Controller
         } else {
 
             $request->session()->put('user', $user);
-            return redirect('/home');
+            return Redirect::to('home');
+            
         }
     }
 }
