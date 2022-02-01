@@ -14,7 +14,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/login', function () {
+Route::get('/', function () {
     return view('login');
 });
 
@@ -24,3 +24,4 @@ Route::post("/login", [UserController::class, 'login'])->name('login');
 Route::get("/home", [ProductController::class, 'index']);
 Route::get("/detail/{id}", [ProductController::class, 'detail'])->name("product.detail");
 Route::get("search", [ProductController::class, 'search'])->name("product.search");
+Route::post("add_to_cart", [ProductController::class, 'add_to_cart'])->name("product.add_to_cart");

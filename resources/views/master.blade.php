@@ -55,6 +55,9 @@
     .search-box{
         width: 400px !important;
     }
+    .products{
+        padding-left:50px;
+    }
 
 </style>
 
